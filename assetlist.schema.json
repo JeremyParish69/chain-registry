@@ -97,6 +97,19 @@
                             "type": "string",
                             "format": "uri-reference"
                         }
+                    },
+                    "if": {
+                        "required": [
+                            "png"
+                        ]
+                    },
+                    "then": {
+                        "required": [
+                            "png": {
+                                "type": "string",
+                                "pattern": "^https://raw\.githubusercontent\.com/cosmos/chain-registry/master/([a-z]|[0-9]){1,}/images/([a-z]|[0-9]){1,}\.png$"
+                            }
+                        ]
                     }
                 },
                 "coingecko_id": {
