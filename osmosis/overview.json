@@ -63,7 +63,7 @@
     },
     {
       "url": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg",
-      "format": "svg",
+      "image_format": "svg",
       "theme": {
         "light_mode_use": true,
         "dark_mode_use": true,
