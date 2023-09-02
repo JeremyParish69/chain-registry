@@ -43,6 +43,6 @@
       "version": "0.34"
     },
     "cosmwasm_version": "0.30",
-    "cosmwasm_enabled": true,
+    "cosmwasm_enabled": true
   }
 }
