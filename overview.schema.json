@@ -154,7 +154,7 @@
               "jpg",
               "jpeg",
               "webp"
-            ],
+            ]
           },
           "theme": {
             "type": "object",
@@ -177,14 +177,14 @@
               },
               "logo_typeface": {
                 "type": "boolean"
-              },
+              }
             },
             "additionalProperties": false
           }
         },
-        "required": ["url"]
+        "required": ["url"],
+        "additionalProperties": false
       }
     }
-  },
-  "required": ["$schema", "networks", "slip_0044", "slip_0173"]
+  }
 }
