@@ -5,21 +5,18 @@
       "chain_name": "osmosis",
       "chain_instance": "osmosis-1",
       "network_type": "mainnet",
-      "status": "live",
       "pretty_name": "Osmosis",
     },
     {
       "chain_name": "osmosistestnet",
       "chain_instance": "osmo-test-5",
       "network_type": "testnet",
-      "status": "live",
       "pretty_name": "Osmosis Testnet",
     },
     {
       "chain_name": "osmosistestnet2",
       "chain_instance": "osmo-test-4",
       "network_type": "testnet",
-      "status": "killed",
       "pretty_name": "Osmosis Testnet (osmo-test-4)",
     }
   ],
