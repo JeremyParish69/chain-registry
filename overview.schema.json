@@ -181,7 +181,9 @@
             },
             "additionalProperties": false
           }
-        }
+        },
+        "required": ["url"],
+        "additionalProperties": false
       }
     }
   },
