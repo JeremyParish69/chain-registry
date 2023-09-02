@@ -1,0 +1,245 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "chain_name": {
+      "type": "string",
+      "pattern": "[a-z0-9]+"
+    },
+    "chain_instance": {
+      "type": "string"
+    },
+    "chain_id": {
+      "type": "string"
+    },
+    "pre_fork": {
+      "properties": {
+        "chain_name": {
+          "type": "string",
+          "pattern": "[a-z0-9]+"
+        },
+        "chain_instance": {
+          "type": "string"
+        }
+      },
+      "required": ["chain_name", "chain_instance"],
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "live",
+        "upcoming",
+        "killed"
+      ]
+    },
+    "daemon_name": {
+      "type": "string"
+    },
+    "node_home": {
+      "type": "string"
+    },
+    "key_algos": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "secp256k1",
+          "ethsecp256k1",
+          "ed25519",
+          "sr25519"
+        ],
+        "uniqueItems": true
+      }
+    },
+    "coin_type": {
+      "type": "integer"
+    },
+    "bech32_prefix": {
+      "type": "string"
+    },
+    "fees": {
+      "type": "object",
+      "properties": {
+        "fee_tokens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "denom": {
+                "type": "string"
+              },
+              "fixed_min_gas_price": {
+                "type": "number"
+              },
+              "low_gas_price": {
+                "type": "number"
+              },
+              "average_gas_price": {
+                "type": "number"
+              },
+              "high_gas_price": {
+                "type": "number"
+              }
+            },
+            "required": ["denom"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["fee_tokens"],
+      "additionalProperties": false
+    },
+    "staking": {
+      "type": "object",
+      "properties": {
+        "staking_tokens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "denom": {
+                "type": "string"
+              }
+            },
+            "required": ["denom"],
+            "additionalProperties": false
+          }
+        },
+         "lock_duration": {
+          "type": "object",
+          "properties": {
+            "blocks": {
+              "type": "number",
+              "description": "The number of blocks for which the staked tokens are locked."
+            },
+            "time": {
+              "type": "string",
+              "description": "The approximate time for which the staked tokens are locked."
+            }
+          },
+          "additionalProperties": false,
+          "minProperties": 1
+        }
+      },
+      "required": ["staking_tokens"],
+      "additionalProperties": false
+    },
+    "codebase": {
+      "type": "object",
+      "properties": {
+        "genesis": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "genesis_url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "ics_ccv_url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": ["genesis_url"],
+          "additionalProperties": false
+        },
+        "recommended_version": {
+          "type": "string"
+        },
+        "compatible_versions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "binaries": {
+          "type": "object",
+          "properties": {
+            "linux/amd64": {
+              "type": "string",
+              "format": "uri"
+            },
+            "linux/arm64": {
+              "type": "string",
+              "format": "uri"
+            },
+            "darwin/amd64": {
+              "type": "string",
+              "format": "uri"
+            },
+            "darwin/arm64": {
+              "type": "string",
+              "format": "uri"
+            },
+            "windows/amd64": {
+              "type": "string",
+              "format": "uri"
+            },
+            "windows/arm64": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "additionalProperties": false
+        },
+        "cosmos_sdk_version": {
+          "type": "string"
+        },
+        "consensus": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "tendermint",
+                "cometbft"
+              ]
+            },
+            "version": {
+              "type": "string"
+            }
+          },
+          "required": ["type"],
+          "additionalProperties": false
+        },
+        "cosmwasm_version": {
+          "type": "string"
+        },
+        "cosmwasm_enabled": {
+          "type": "boolean"
+        },
+        "cosmwasm_path": {
+          "type": "string",
+          "description": "Relative path to the cosmwasm directory. ex. $HOME/.juno/data/wasm",
+          "pattern": "^\\$HOME.*$"
+        },
+        "ibc_go_version": {
+          "type": "string"
+        },
+        "ics_enabled": {
+          "type": "array",
+          "description": "List of IBC apps (usually corresponding to a ICS standard) which have been enabled on the network.",
+          "items": {
+            "type": "string",
+            "description": "IBC app or ICS standard.",
+            "enum": [
+              "ics20-1",
+              "ics27-1",
+              "mauth"
+            ]
+          }
+        }
+      },
+      "required": ["genesis", "recommended_version"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["$schema", "chain_name", "chain_instance", "chain_id", "status", "daemon_name", "node_home", "key_algos", "coin_type", "bech32_prefix", "fees", "staking", "codebase"],
+  "additionalProperties": false
+}
