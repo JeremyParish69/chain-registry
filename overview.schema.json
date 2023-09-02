@@ -146,6 +146,16 @@
             "format": "uri-reference",
             "pattern": "^https://raw\\.githubusercontent\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\.(png|svg|jpg|jpeg|webp)$"
           },
+          "image_format": {
+            "type": "string",
+            "enum": [
+              "png",
+              "svg",
+              "jpg",
+              "jpeg",
+              "webp"
+            ]
+          },
           "theme": {
             "type": "object",
             "properties": {
@@ -176,6 +186,5 @@
         "additionalProperties": false
       }
     }
-  },
-  "required": ["networks", "slip_0044", "slip_0173"]
+  }
 }
