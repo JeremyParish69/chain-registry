@@ -187,5 +187,6 @@
       }
     }
   },
-  "required": ["networks", "slip_0044", "slip_0173"]
+  "required": ["$schema", "networks", "slip_0044", "slip_0173"],
+  "additionalProperties": false
 }
