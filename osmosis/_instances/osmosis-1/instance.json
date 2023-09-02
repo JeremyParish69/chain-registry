@@ -36,7 +36,7 @@
     "genesis": {
       "name": "v3",
       "genesis_url": "https://github.com/osmosis-labs/networks/raw/main/osmosis-1/genesis.json"
-    }
+    },
     "recommended_version": "v18.0.0",
     "compatible_versions": [
       "v18.0.0"
