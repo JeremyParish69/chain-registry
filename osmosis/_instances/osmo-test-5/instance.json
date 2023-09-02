@@ -32,7 +32,7 @@
   "codebase": {
     "genesis": {
       "genesis_url": "https://genesis.osmotest5.osmosis.zone/genesis.json"
-    }
+    },
     "recommended_version": "v15.0.0",
     "compatible_versions": [
       "v15.0.0"
