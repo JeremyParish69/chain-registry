@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../../instance.schema.json",
+  "chain_name": "osmosis",
+  "chain_instance": "osmo-test-4",
+  "chain_id": "osmo-test-4",
+  "status": "killed",
+  "daemon_name": "osmosisd",
+  "node_home": "$HOME/.osmosisd",
+  "key_algos": [
+    "secp256k1"
+  ],
+  "coin_type": 118,
+  "bech32_prefix": "osmo",
+  "fees": {
+    "fee_tokens": [
+      {
+        "denom": "uosmo",
+        "fixed_min_gas_price": 0,
+        "low_gas_price": 0.0025,
+        "average_gas_price": 0.025,
+        "high_gas_price": 0.04
+      }
+    ]
+  },
+  "staking": {
+    "staking_tokens": [
+      {
+        "denom": "uosmo"
+      }
+    ]
+  },
+  "codebase": {
+    "genesis": {
+      "genesis_url": "https://github.com/osmosis-labs/networks/raw/main/osmo-test-4/genesis.tar.bz2"
+    },
+    "recommended_version": "v15.0.0-rc3",
+    "compatible_versions": [
+      "v15.0.0-rc3"
+    ],
+    "cosmos_sdk_version": "0.45",
+    "consensus": {
+      "type": "tendermint",
+      "version": "0.34"
+    },
+    "cosmwasm_version": "0.29",
+    "cosmwasm_enabled": true
+  }
+}
