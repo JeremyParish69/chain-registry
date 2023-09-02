@@ -55,6 +55,6 @@
     "ibc_go_version": "4.3.1",
     "ics_enabled": [
       "ics20-1"
-    ],
+    ]
   }
 }
