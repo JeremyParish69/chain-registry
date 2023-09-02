@@ -5,34 +5,6 @@
     "$schema": {
       "type": "string"
     },
-    "networks": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "chain_name": {
-            "type": "string",
-            "pattern": "[a-z0-9]+"
-          },
-          "chain_instance": {
-            "type": "string"
-          },
-          "network_type": {
-            "type": "string",
-            "enum": [
-              "mainnet",
-              "testnet",
-              "devnet",
-              "edgenet"
-            ]
-          },
-          "pretty_name": {
-            "type": "string"
-          }
-        },
-        "required": ["chain_name", "chain_instance", "network_type", "pretty_name"]
-      }
-    },
     "slip_0044": {
       "type": "object",
       "properties": {
