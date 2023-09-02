@@ -1,4 +1,37 @@
 {
+  "$schema": "../../overview.schema.json",
+  "networks": [
+    {
+      "chain_name": "osmosis",
+      "chain_instance": "osmosis-1",
+      "network_type": "mainnet",
+      "pretty_name": "Osmosis"
+    },
+    {
+      "chain_name": "osmosistestnet",
+      "chain_instance": "osmo-test-5",
+      "network_type": "testnet",
+      "pretty_name": "Osmosis Testnet"
+    },
+    {
+      "chain_name": "osmosistestnet2",
+      "chain_instance": "osmo-test-4",
+      "network_type": "testnet",
+      "pretty_name": "Osmosis Testnet (osmo-test-4)"
+    }
+  ],
+  "slip_0044": {
+    "coin_type": 118,
+    "path_component": "0x80000076",
+    "symbol": "ATOM",
+    "coin": "Atom"
+  },
+  "slip_0173": {
+    "coin": "Osmosis",
+    "mainnet": "osmo",
+    "testnet": "",
+    "regtest": ""
+  },
   "codebase": {
     "git_repo": "https://github.com/osmosis-labs/osmosis"
   },
