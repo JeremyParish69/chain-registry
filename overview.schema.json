@@ -30,7 +30,7 @@
             "type": "string"
           }
         },
-        "required": ["chain_name", "chain_instance", "network_type", "status", "pretty_name"]
+        "required": ["chain_name", "chain_instance", "network_type", "pretty_name"]
       }
     },
     "slip_0044": {
