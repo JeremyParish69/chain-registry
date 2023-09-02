@@ -1,5 +1,4 @@
 {
-  "$schema": "../../overview.schema.json",
   "networks": [
     {
       "chain_name": "osmosis",
@@ -31,46 +30,5 @@
     "mainnet": "osmo",
     "testnet": "",
     "regtest": ""
-  },
-  "codebase": {
-    "git_repo": "https://github.com/osmosis-labs/osmosis"
-  },
-  "website": "https://osmosis.zone",
-  "brand_kit": "https://osmosis.zone/brand",
-  "socials": {
-    "github": "https://github.com/osmosis-labs",
-    "x": "https://twitter.com/osmosiszone",
-    "discord": "",
-    "telegram": "https://t.me/osmosis_chat",
-    "blog": "https://osmosis.zone/blog",
-    "medium": "https://medium.com/osmosis",
-    "youtube": "https://www.youtube.com/c/osmosiszone",
-    "forum": "https://forum.osmosis.zone",
-    "coingecko": "https://www.coingecko.com/en/coins/osmosis",
-    "coinmarketcap": "https://coinmarketcap.com/currencies/osmosis/"
-  },
-  "logo_images": [
-    {
-      "url": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmosis-chain-logo.png",
-      "format": "png",
-      "theme": {
-        "light_mode_use": true,
-        "dark_mode_use": false,
-        "is_monotone": false,
-        "logo_icon": true,
-        "logo_typeface": true
-      }
-    },
-    {
-      "url": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg",
-      "image_format": "svg",
-      "theme": {
-        "light_mode_use": true,
-        "dark_mode_use": true,
-        "is_monotone": false,
-        "logo_icon": true,
-        "logo_typeface": false
-      }
-    }
-  ]
+  }
 }
