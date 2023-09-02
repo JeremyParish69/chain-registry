@@ -1,4 +1,21 @@
 {
+  "codebase": {
+    "git_repo": "https://github.com/osmosis-labs/osmosis"
+  },
+  "website": "https://osmosis.zone",
+  "brand_kit": "https://osmosis.zone/brand",
+  "socials": {
+    "github": "https://github.com/osmosis-labs",
+    "x": "https://twitter.com/osmosiszone",
+    "discord": "",
+    "telegram": "https://t.me/osmosis_chat",
+    "blog": "https://osmosis.zone/blog",
+    "medium": "https://medium.com/osmosis",
+    "youtube": "https://www.youtube.com/c/osmosiszone",
+    "forum": "https://forum.osmosis.zone",
+    "coingecko": "https://www.coingecko.com/en/coins/osmosis",
+    "coinmarketcap": "https://coinmarketcap.com/currencies/osmosis/"
+  },
   "logo_images": [
     {
       "url": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmosis-chain-logo.png",
