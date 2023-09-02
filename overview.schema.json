@@ -185,5 +185,5 @@
       }
     }
   },
-  "required": ["test"]
+  "required": ["networks", "slip_0044", "slip_0173"]
 }
