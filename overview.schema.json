@@ -5,25 +5,6 @@
     "$schema": {
       "type": "string"
     },
-    "slip_0044": {
-      "type": "object",
-      "properties": {
-        "coin_type": {
-          "type": "integer"
-        },
-        "path_component": {
-          "type": "string"
-        },
-        "symbol": {
-          "type": "string"
-        },
-        "coin": {
-          "type": "string"
-        }
-      },
-      "required": ["coin_type", "path_component", "symbol", "coin"],
-      "additionalProperties": false
-    },
     "slip_0173": {
       "type": "object",
       "properties": {
