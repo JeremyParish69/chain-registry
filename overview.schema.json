@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chain_name": {
+            "type": "string",
+            "pattern": "[a-z0-9]+"
+          },
+          "chain_instance": {
+            "type": "string"
+          },
+          "network_type": {
+            "type": "string",
+            "enum": [
+              "mainnet",
+              "testnet",
+              "devnet",
+              "edgenet"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "live",
+              "upcoming",
+              "killed"
+            ]
+          },
+          "pretty_name": {
+            "type": "string"
+          }
+        },
+        "required": ["chain_name", "chain_instance", "network_type", "status", "pretty_name"]
+      }
+    },
+    "slip_0044": {
+      "type": "object",
+      "properties": {
+        "coin_type": {
+          "type": "integer"
+        },
+        "path_component": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string"
+        }
+      },
+      "required": ["coin_type", "path_component", "symbol", "coin"],
+      "additionalProperties": false
+    },
+    "slip_0173": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "type": "string"
+        },
+        "mainnet": {
+          "type": "string"
+        },
+        "testnet": {
+          "type": "string"
+        },
+        "regtest": {
+          "type": "string"
+        }
+      },
+      "required": ["coin"],
+      "additionalProperties": false
+    },
+    "codebase": {
+      "type": "object",
+      "properties": {
+        "git_repo": {
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "required": ["git_repo"],
+      "additionalProperties": false
+    },
+    "website": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "brand_kit": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "socials": {
+      "type": "object",
+      "properties": {
+        "github": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "x": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "discord": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "telegram": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "blog": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "medium": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "youtube": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "forum": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "coingecko": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "coinmarketcap": {
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "additionalProperties": false
+    },
+    "logo_images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri-reference",
+            "pattern": "^https://raw\\.githubusercontent\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\.(png|svg|jpg|jpeg|webp)$"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "png",
+              "svg",
+              "jpg",
+              "jpeg",
+              "webp"
+            ],
+          },
+          "theme": {
+            "type": "object",
+            "properties": {
+              "primary_color_hex": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "light_mode_use": {
+                "type": "boolean"
+              },
+              "dark_mode_use": {
+                "type": "boolean"
+              },
+              "is_monotone": {
+                "type": "boolean"
+              },
+              "logo_icon": {
+                "type": "boolean"
+              },
+              "logo_typeface": {
+                "type": "boolean"
+              },
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": ["url"]
+      }
+    }
+  },
+  "required": ["$schema", "networks", "slip_0044", "slip_0173"]
+}
