@@ -154,7 +154,7 @@
               "jpg",
               "jpeg",
               "webp"
-            ],
+            ]
           },
           "theme": {
             "type": "object",
@@ -177,12 +177,13 @@
               },
               "logo_typeface": {
                 "type": "boolean"
-              },
+              }
             },
             "additionalProperties": false
           }
         },
-        "required": ["url"]
+        "required": ["url"],
+        "additionalProperties": false
       }
     }
   },
