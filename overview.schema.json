@@ -145,6 +145,31 @@
             "type": "string",
             "format": "uri-reference",
             "pattern": "^https://raw\\.githubusercontent\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\.(png|svg|jpg|jpeg|webp)$"
+          },
+          "theme": {
+            "type": "object",
+            "properties": {
+              "primary_color_hex": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "light_mode_use": {
+                "type": "boolean"
+              },
+              "dark_mode_use": {
+                "type": "boolean"
+              },
+              "is_monotone": {
+                "type": "boolean"
+              },
+              "logo_icon": {
+                "type": "boolean"
+              },
+              "logo_typeface": {
+                "type": "boolean"
+              },
+            },
+            "additionalProperties": false
           }
         }
       }
