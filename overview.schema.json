@@ -26,14 +26,6 @@
               "edgenet"
             ]
           },
-          "status": {
-            "type": "string",
-            "enum": [
-              "live",
-              "upcoming",
-              "killed"
-            ]
-          },
           "pretty_name": {
             "type": "string"
           }
