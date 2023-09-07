@@ -1,0 +1,35 @@
+{
+  "$schema": "../../../../versions.schema.json",
+  "chain_name": "osmosistestnet",
+  "chain_instance": "osmo-test-4",
+  "versions": [
+    {
+      "name": "v14.0.0-rc1",
+      "recommended_version": "v14.0.0-rc1",
+      "compatible_versions": [
+        "v14.0.0-rc1"
+      ],
+      "cosmos_sdk_version": "0.45",
+      "consensus": {
+        "type": "tendermint",
+        "version": "0.34"
+      },
+      "cosmwasm_version": "0.29",
+      "cosmwasm_enabled": true
+    },
+    {
+      "name": "v15.0.0-rc3",
+      "recommended_version": "v15.0.0-rc3",
+      "compatible_versions": [
+        "v15.0.0-rc3"
+      ],
+      "cosmos_sdk_version": "0.45",
+      "consensus": {
+        "type": "tendermint",
+        "version": "0.34"
+      },
+      "cosmwasm_version": "0.29",
+      "cosmwasm_enabled": true
+    }
+  ]
+}
