@@ -1,25 +1,22 @@
 {
   "$schema": "../../overview.schema.json",
-  "networks": [
-    {
+  "networks": {
+    "mainnet": {
       "chain_name": "osmosis",
       "chain_instance": "osmosis-1",
-      "network_type": "mainnet",
       "pretty_name": "Osmosis"
     },
-    {
+    "testnet": {
       "chain_name": "osmosistestnet",
       "chain_instance": "osmo-test-5",
-      "network_type": "testnet",
       "pretty_name": "Osmosis Testnet"
     },
-    {
+    "testnet2": {
       "chain_name": "osmosistestnet2",
       "chain_instance": "osmo-test-4",
-      "network_type": "testnet",
       "pretty_name": "Osmosis Testnet (osmo-test-4)"
     }
-  ],
+  },
   "slip_0044": {
     "coin_type": 118,
     "path_component": "0x80000076",
