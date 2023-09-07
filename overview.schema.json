@@ -6,32 +6,21 @@
       "type": "string"
     },
     "networks": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "chain_name": {
-            "type": "string",
-            "pattern": "[a-z0-9]+"
-          },
-          "chain_instance": {
-            "type": "string"
-          },
-          "network_type": {
-            "type": "string",
-            "enum": [
-              "mainnet",
-              "testnet",
-              "devnet",
-              "edgenet"
-            ]
-          },
-          "pretty_name": {
-            "type": "string"
-          }
-        },
-        "required": ["chain_name", "chain_instance", "network_type", "pretty_name"]
-      }
+      "type": "object",
+      "properties": {
+        "mainnet": { "$ref": "#/$defs/network" },
+        "testnet": { "$ref": "#/$defs/network" },
+        "testnet2": { "$ref": "#/$defs/network" },
+        "testnet3": { "$ref": "#/$defs/network" },
+        "devnet": { "$ref": "#/$defs/network" },
+        "devnet2": { "$ref": "#/$defs/network" },
+        "devnet3": { "$ref": "#/$defs/network" },
+        "edgenet": { "$ref": "#/$defs/network" },
+        "edgenet2": { "$ref": "#/$defs/network" },
+        "edgenet3": { "$ref": "#/$defs/network" }
+      },
+      "additionalProperties": false,
+      "minProperties": 1
     },
     "slip_0044": {
       "type": "object",
@@ -188,5 +177,24 @@
     }
   },
   "required": ["$schema", "networks", "slip_0044", "slip_0173"],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "$defs": {
+    "network": {
+      "type": "object",
+      "properties": {
+        "chain_name": {
+          "type": "string",
+          "pattern": "[a-z0-9]+"
+        },
+        "chain_instance": {
+          "type": "string"
+        },
+        "pretty_name": {
+          "type": "string"
+        }
+      },
+      "required": ["chain_name", "chain_instance", "pretty_name"],
+      "additionalProperties": false
+    }
+  }
 }
